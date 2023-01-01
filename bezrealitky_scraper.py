@@ -54,7 +54,7 @@ for i in range(1, last_page + 1):
             EC.visibility_of_all_elements_located((By.XPATH, "//tbody"))
         )
         
-        price = driver.find_element(By.XPATH, "/html/body/div[1]/main/div[2]/section/div/div[2]/div/div/div/p[1]/span[2]/strong")
+        price = driver.find_element(By.XPATH, "//strong[@class='h4 fw-bold']")
         temp_dict = {'Cena': price.text}
         for table in tables:
             names = table.find_elements(By.XPATH, ".//th")
